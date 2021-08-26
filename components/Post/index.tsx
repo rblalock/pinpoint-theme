@@ -16,7 +16,7 @@ const Post = (props: PostProps) => {
 				<a onClick={() => router.push(new URL(row.url).pathname)} className="block h-64 overflow-hidden">
 					<img
 						src={row.coverMedia?.placeholderImage}
-						className="object-cover w-full h-full"
+						className="object-cover w-full"
 						alt={row.headline}
 					/>
 				</a>
@@ -24,9 +24,12 @@ const Post = (props: PostProps) => {
 
 			<div className="p-5 pb-6">
 				<h2 className="mb-2">
-					<a onClick={() => router.push(new URL(row.url).pathname)} className="text-2xl font-bold leading-tight tracking-tight">
+					<span onClick={() => {
+						console.log(row.url);
+						router.push(new URL(row.url).pathname);
+					}} className="text-2xl font-bold leading-tight tracking-tight">
 						{row.title}
-					</a>
+					</span>
 				</h2>
 				<p className="mb-2 text-sm font-medium tracking-widest text-gray-500">
 					Written on <DateLabel className="Prebuilt" ts={row.publishedAt} />

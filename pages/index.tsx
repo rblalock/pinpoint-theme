@@ -53,7 +53,7 @@ export default function Home(props: HomeProps) {
 						</div>
 
 						{/* CONTENT */}
-						<div className="grid grid-cols-12 gap-8">
+						<div className="md:grid md:grid-cols-12 md:gap-8 space-y-5 md:space-y-0">
 							{props.content ? props.content.map(row => (
 								<Post key={row.id} content={row} />
 							)) : null}

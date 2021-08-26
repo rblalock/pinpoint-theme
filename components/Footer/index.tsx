@@ -6,8 +6,8 @@ export interface FooterProps {
 
 const Footer = (_props: FooterProps) => {
 	return (
-		<section className="box-border pt-5 leading-7 text-gray-900 bg-white border-0 border-gray-200 border-solid pb-7 w-full container">
-			<div className="box-border px-4 mx-auto border-solid md:px-6 lg:px-8 max-w-7xl">
+		<section className="box-border pt-5 leading-7 text-gray-900 bg-white border-0 border-gray-200 border-solid pb-7 w-full px-10">
+			<div className="box-border px-4 mx-auto border-solid md:px-6 lg:px-8">
 				<div className="flex items-center text-gray-900 border-0 border-gray-200">
 					<a
 						href="#_"
