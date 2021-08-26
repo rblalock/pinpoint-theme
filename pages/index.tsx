@@ -3,15 +3,12 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import {
 	Analytics,
-	DateLabel,
 	fetchAnalytics,
 	fetchContentPaginated,
 	fetchSiteWithContentCount,
 	Head,
 	IContent,
 	ISite,
-	Pagination,
-	Prebuilt,
 } from '@pinpt/react';
 
 import config from '../pinpoint.config';

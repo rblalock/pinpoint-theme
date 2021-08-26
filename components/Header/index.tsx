@@ -1,5 +1,5 @@
 import router from 'next/router';
-import { ISite, Prebuilt } from '@pinpt/react';
+import { ISite } from '@pinpt/react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -16,11 +16,6 @@ const Header = (_props: HeaderProps) => {
 
 	return (
 		<>
-			{/* <Prebuilt.Header
-				site={site}
-				handleSearch={(value) => router.push(`/search?term=${value}`)}
-				handleSelectHome={() => router.push('/')}
-			/> */}
 			<section className="w-full px-8 text-gray-700 bg-white">
 				<div className="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
 					<div className="relative flex flex-col md:flex-row">
