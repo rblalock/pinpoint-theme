@@ -43,7 +43,7 @@ const Header = (_props: HeaderProps) => {
 					</div>
 					
 					<div className="inline-flex items-center ml-5 space-x-6 lg:justify-end">
-						<div className="inline-flex items-center ml-5 space-x-6 lg:w-2/5 lg:justify-end lg:ml-0">
+						<div className="inline-flex items-center space-x-6 lg:w-2/5 lg:justify-end lg:ml-0">
 							<span className="inline-flex justify-center space-x-5 md:ml-auto md:mt-0 md:justify-start">
 								<a href="https://twitter.com/rblalock" className="text-gray-400 hover:text-gray-500">
 									<span className="sr-only">Twitter</span>
@@ -73,6 +73,12 @@ const Header = (_props: HeaderProps) => {
 								</a>
 							</span>
 						</div>
+
+						<Link passHref href="/">
+							<span className="text-base font-bold leading-6 text-gray-600 whitespace-no-wrap transition duration-150 ease-in-out hover:text-gray-900 cursor-pointer">
+								Entries
+							</span>
+						</Link>
 
 						<Link passHref href="/entry/iSJWbhPOoknsjqzKmfFL/About-this-site-and-me">
 							<span className="text-base font-bold leading-6 text-gray-600 whitespace-no-wrap transition duration-150 ease-in-out hover:text-gray-900 cursor-pointer">

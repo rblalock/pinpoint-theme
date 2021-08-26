@@ -65,11 +65,7 @@ export default function EntryPage(props: EntryPageProps) {
 					{/* PAGINATION */}
 					<div className="mt-20 flex items-center">
 						{before ? (
-							<a onClick={() => {
-								before
-									? () => router.push(new URL(before.url).pathname)
-									: () => router.push('/')
-							}} className="relative h-6 group">
+							<a onClick={() => router.push(new URL(before.url).pathname)} className="relative h-6 group">
 								<span className="relative z-10 px-5 py-2 font-bold leading-tight text-black bg-white border-4 border-gray-900 rounded-lg group-hover:bg-blue-100 cursor-pointer">
 									Previous
 								</span>

@@ -1,4 +1,6 @@
-import { ISite, Prebuilt } from '@pinpt/react';
+import { ISite } from '@pinpt/react';
+import Link from 'next/link';
+import React from 'react';
 
 export interface FooterProps {
 	site: ISite;
@@ -9,14 +11,13 @@ const Footer = (_props: FooterProps) => {
 		<section className="box-border pt-5 leading-7 text-gray-900 bg-white border-0 border-gray-200 border-solid pb-7 w-full px-10">
 			<div className="box-border px-4 mx-auto border-solid md:px-6 lg:px-8">
 				<div className="flex items-center text-gray-900 border-0 border-gray-200">
-					<a
-						href="#_"
-						className="flex-grow"
-					>
-						<span className="text-xl font-black leading-none text-gray-900 select-none logo">
-							rickblalock<span className="text-blue-500">.dev</span>
+					<Link passHref href="/">
+						<span className="flex-grow cursor-pointer">
+							<span className="text-xl font-black leading-none text-gray-900 select-none logo">
+								rickblalock<span className="text-blue-500">.dev</span>
+							</span>
 						</span>
-					</a>
+					</Link>
 
 					<div className="flex space-x-3 md:mt-0">
 						<a href="https://twitter.com/rblalock" className="text-gray-400 hover:text-gray-500">
