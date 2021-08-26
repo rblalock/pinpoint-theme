@@ -6,4 +6,13 @@ module.exports = withPinpointConfig({
 	images: {
 		disableStaticImages: true,
 	},
+	async redirects() {
+		return [
+			{
+				source: '/post/:slug',
+				destination: '/',
+				permanent: true,
+			},
+		]
+	},
 });

@@ -54,8 +54,8 @@ export default function Home(props: HomeProps) {
 
 						{/* CONTENT */}
 						<div className="md:grid md:grid-cols-12 md:gap-8 space-y-5 md:space-y-0">
-							{props.content ? props.content.map(row => (
-								<Post key={row.id} content={row} />
+							{props.content ? props.content.map((row, index) => (
+								<Post key={row.id} content={row} highlight={index === 0} />
 							)) : null}
 						</div>
 
