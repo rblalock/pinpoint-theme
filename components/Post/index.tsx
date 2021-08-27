@@ -12,7 +12,7 @@ const Post = (props: PostProps) => {
 	const router = useRouter();
 
 	return (
-		<div key={row.id} className={`relative col-span-12 duration-150 ease-out transform border-2 border-black cursor-pointer md:col-span-6 lg:col-span-4 hover:scale-105 ${props.highlight ? 'bg-black' : ''}`}>
+		<div className={`relative col-span-12 duration-150 ease-out transform border-2 border-black cursor-pointer md:col-span-6 lg:col-span-4 hover:scale-105 ${props.highlight ? 'bg-black' : ''}`}>
 			{row.coverMedia?.placeholderImage ? (
 				<a onClick={() => router.push(new URL(row.url).pathname)} className="block h-64 overflow-hidden">
 					<img
@@ -34,7 +34,9 @@ const Post = (props: PostProps) => {
 				<p className={`mb-2 text-sm font-medium tracking-widest ${props.highlight ? 'text-gray-300' : 'text-gray-500'}`}>
 					Written on <DateLabel className="Prebuilt" ts={row.publishedAt} />
 				</p>
-				<p className={`${props.highlight ? 'text-gray-100' : 'text-gray-700'}`}>
+				<p onClick={() => {
+					router.push(new URL(row.url).pathname);
+				}} className={`${props.highlight ? 'text-gray-100' : 'text-gray-700'}`}>
 					<span>
 						{row.headline}
 					</span>

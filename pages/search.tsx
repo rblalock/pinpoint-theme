@@ -1,7 +1,7 @@
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useMemo } from 'react';
-import { fetchSite, Head, useSearch } from '@pinpt/react';
+import { DateLabel, fetchSite, Head, useSearch } from '@pinpt/react';
 import config from '../pinpoint.config';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -52,9 +52,37 @@ export default function Search(props: SearchProps) {
 						</div>
 
 						{/* CONTENT */}
-						<div className="md:grid md:grid-cols-12 md:gap-8 space-y-5 md:space-y-0">
+						<div className="">
 							{results ? results.map(row => (
-								<Post key={row.id} content={row} />
+								<div key={row.id} className={`relative w-full mb-10 flex items-center duration-150 ease-out transform shadow-xl border rounded-xl cursor-pointer hover:scale-105`}>
+									{row.coverMedia?.placeholderImage ? (
+										<a onClick={() => router.push(new URL(row.url).pathname)} className="block overflow-hidden p-5 rounded-xl">
+											<img
+												src={row.coverMedia?.placeholderImage}
+												className="object-cover w-full h-64 rounded-xl border-4 border-black"
+												alt={row.headline}
+											/>
+										</a>
+									) : null}
+
+									<div className="p-5 pb-6">
+										<h2 className="mb-2">
+											<span onClick={() => {
+												router.push(new URL(row.url).pathname);
+											}} className={`text-2xl font-bold leading-tight tracking-tight`}>
+												{row.title}
+											</span>
+										</h2>
+										<p className={`mb-2 text-sm font-medium tracking-widest text-gray-500`}>
+											Written on <DateLabel className="Prebuilt" ts={row.publishedAt} />
+										</p>
+										<p className={`${props.highlight ? 'text-gray-100' : 'text-gray-700'}`}>
+											<span>
+												{row.headline}
+											</span>
+										</p>
+									</div>
+								</div>
 							)) : null}
 						</div>
 					</div>

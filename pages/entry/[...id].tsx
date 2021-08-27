@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import {
 	Banner,
+	DateLabel,
 	fetchContent,
 	fetchContentPaginated,
 	Head,
@@ -57,6 +58,9 @@ export default function EntryPage(props: EntryPageProps) {
 									</div>
 								) : null}
 
+								<p className={`mb-1 text-sm font-medium text-gray-400`}>
+									Written on <DateLabel className="Prebuilt text-gray-600" ts={content.publishedAt} />
+								</p>
 								<Document node={content.document} />
 							</>
 						)}
