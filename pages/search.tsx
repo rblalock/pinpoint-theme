@@ -24,8 +24,6 @@ export default function Search(props: SearchProps) {
 		[tags, term]
 	);
 
-	console.log(results);
-
 	return (
 		<>
 			<NextHead>
