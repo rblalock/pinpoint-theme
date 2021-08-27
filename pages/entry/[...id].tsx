@@ -54,7 +54,15 @@ export default function EntryPage(props: EntryPageProps) {
 							<>
 								{content.coverMedia ? (
 									<div className="mx-auto relative z-10 font-bold leading-tight text-black border-8 border-gray-900 rounded-lg mb-10">
-										<CoverMedia media={content.coverMedia} title={content.title} />
+										{content.coverMedia?.placeholderImage !== '' ? (
+											<CoverMedia media={content.coverMedia} title={content.title} />
+										) : (
+											<img
+												src="https://picsum.photos/id/1032/1200/1000"
+												className="object-cover w-full h-64"
+												alt={content.headline}
+											/>
+										)}
 									</div>
 								) : null}
 
