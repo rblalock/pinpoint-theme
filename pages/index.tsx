@@ -42,7 +42,7 @@ export default function Home(props: HomeProps) {
 			
 			<div>
 				<section className="w-full py-16 bg-white">
-					<div className="px-10 mx-auto max-w-7xl">
+					<div className="px-5 md:px-10 mx-auto max-w-7xl">
 						{/* TOP */}
 						<div className="text-center mb-10">
 							<h2 className="relative inline-block px-5 py-2 mb-5 text-4xl font-bold font-extrabold bg-white border-2 border-black rounded">

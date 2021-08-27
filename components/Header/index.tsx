@@ -42,7 +42,7 @@ const Header = (_props: HeaderProps) => {
 						</div>
 					</div>
 					
-					<div className="inline-flex items-center ml-5 space-x-6 lg:justify-end">
+					<div className="inline-flex items-center md:ml-5 space-x-6 lg:justify-end">
 						<div className="inline-flex items-center space-x-6 lg:w-2/5 lg:justify-end lg:ml-0">
 							<span className="inline-flex justify-center space-x-5 md:ml-auto md:mt-0 md:justify-start">
 								<a href="https://twitter.com/rblalock" className="text-gray-400 hover:text-gray-500">
@@ -87,7 +87,7 @@ const Header = (_props: HeaderProps) => {
 						</Link>
 
 						<Link passHref href="/subscription/subscribe">
-							<a href="/subscription/subscribe" className="relative h-6 group">
+							<a href="/subscription/subscribe" className="relative h-6 group scale-75 md:scale-100">
 								<span className="relative z-10 px-5 py-2 font-bold leading-tight text-black bg-white border-4 border-gray-900 rounded-lg group-hover:bg-blue-100 cursor-pointer">
 									Signup
 								</span>
