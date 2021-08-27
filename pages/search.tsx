@@ -74,7 +74,7 @@ export default function Search(props: SearchProps) {
 										<p className={`mb-2 text-sm font-medium tracking-widest text-gray-500`}>
 											Written on <DateLabel className="Prebuilt" ts={row.publishedAt} />
 										</p>
-										<p className={`${props.highlight ? 'text-gray-100' : 'text-gray-700'}`}>
+										<p className={`text-gray-700`}>
 											<span>
 												{row.headline}
 											</span>
