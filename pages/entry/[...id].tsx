@@ -97,8 +97,8 @@ export default function EntryPage(props: EntryPageProps) {
 									<h2 className="m-0 text-xl md:text-4xl font-semibold text-center leading-tight tracking-tight text-black border-0 border-gray-200">
 										Want these delivered via email?
 									</h2>
-									<p className="mt-2 md:text-2xl text-center md:text-left text-gray-900 border-0 border-gray-200">
-										Sign up below and you will get an email digest when there is a new post.
+									<p className="mt-2 md:text-2xl text-center text-gray-900 border-0 border-gray-200">
+										Sign up below and you will get an email digest when there is a new content.
 									</p>
 								</div>
 								<Link passHref href="/subscription/subscribe">
