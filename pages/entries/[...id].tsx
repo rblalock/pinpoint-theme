@@ -2,18 +2,13 @@ import NextHead from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import {
-	Analytics,
-	fetchAnalytics,
-	fetchContentPaginated,
-	fetchSiteWithContentCount,
-	Head,
-	IContent,
-	ISite,
+	Analytics, fetchAnalytics, fetchContentPaginated, fetchSiteWithContentCount, Head, IContent,
+	ISite
 } from '@pinpt/react';
-import config from '../../pinpoint.config';
-import Post from '../../components/Post';
-import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import Post from '../../components/Post';
+import config from '../../pinpoint.config';
 
 interface PageProps {
 	pageNumber: number;
@@ -54,19 +49,20 @@ export default function Page(props: PageProps) {
 
 						{/* CONTENT */}
 						<div className="md:grid md:grid-cols-12 md:gap-8 space-y-5 md:space-y-0">
-							{content ? content.map(row => (
-								<Post key={row.id} content={row} />
-							)) : null}
+							{content ? content.map((row) => <Post key={row.id} content={row} />) : null}
 						</div>
 
 						{/* PAGINATION */}
 						<div className="mt-10 flex items-center">
 							{before ? (
-								<a onClick={() => {
-									pageNumber > 2 && before
-										? () => router.push(`/entries/${pageNumber - 1}/${before.dateAt}/${pageCount}`)
-										: () => router.push('/')
-								}} className="relative h-6 group">
+								<a
+									onClick={() => {
+										pageNumber > 2 && before
+											? () => router.push(`/entries/${pageNumber - 1}/${before.dateAt}/${pageCount}`)
+											: () => router.push('/');
+									}}
+									className="relative h-6 group"
+								>
 									<span className="relative z-10 px-5 py-2 font-bold leading-tight text-black bg-white border-4 border-gray-900 rounded-lg group-hover:bg-blue-100 cursor-pointer">
 										Previous
 									</span>
@@ -77,7 +73,10 @@ export default function Page(props: PageProps) {
 							<span className="flex-grow" />
 
 							{after ? (
-								<a onClick={() => router.push(`/entries/${pageNumber + 1}/${after.dateAt}/${pageCount}`)} className="relative h-6 group">
+								<a
+									onClick={() => router.push(`/entries/${pageNumber + 1}/${after.dateAt}/${pageCount}`)}
+									className="relative h-6 group"
+								>
 									<span className="relative z-10 px-5 py-2 font-bold leading-tight text-black bg-white border-4 border-gray-900 rounded-lg group-hover:bg-blue-100 cursor-pointer">
 										Next
 									</span>
@@ -152,6 +151,6 @@ export async function getStaticProps({ params }: { params: { id: [string, string
 			pageCount,
 			analytics,
 		},
-		revalidate: 60, // TODO: set low and cache on proxy
+		revalidate: 1,
 	};
 }
