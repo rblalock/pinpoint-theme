@@ -52,7 +52,7 @@ export default function Search(props: SearchProps) {
 								? results.map((row) => (
 										<div
 											key={row.id}
-											className={`relative w-full mb-10 flex items-center duration-150 ease-out transform shadow-xl border rounded-xl cursor-pointer hover:scale-105`}
+											className={`relative w-full mb-10 flex flex-col md:flex-row items-center duration-150 ease-out transform shadow-xl border rounded-xl cursor-pointer hover:scale-105`}
 										>
 											{row.coverMedia?.placeholderImage ? (
 												<a
