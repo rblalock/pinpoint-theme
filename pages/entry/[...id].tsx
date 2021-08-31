@@ -1,22 +1,14 @@
 import NextHead from 'next/head';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import {
-	Banner,
-	DateLabel,
-	fetchContent,
-	fetchContentPaginated,
-	Head,
-	IContent,
-	ISite,
-	Pinpoint,
+	Banner, DateLabel, fetchContent, fetchContentPaginated, Head, IContent, ISite, Pinpoint
 } from '@pinpt/react';
 import { CoverMedia, Document } from '@pinpt/react/dist/components/Renderer';
-import Link from 'next/link';
-
-import config from '../../pinpoint.config';
-import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import config from '../../pinpoint.config';
 
 interface EntryPageProps {
 	content: IContent;
@@ -165,6 +157,6 @@ export async function getStaticProps({
 			after,
 			preview: !!preview,
 		},
-		revalidate: 60, // TODO: set low and cache on proxy
+		revalidate: 1,
 	};
 }
