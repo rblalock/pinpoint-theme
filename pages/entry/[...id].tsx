@@ -5,7 +5,7 @@ import React from 'react';
 import {
 	Banner, DateLabel, fetchContent, fetchContentPaginated, Head, IContent, ISite, Pinpoint
 } from '@pinpt/react';
-import { CoverMedia, Document } from '@pinpt/react/dist/components/Renderer';
+import { CoverMedia, Document } from '@pinpt/react/dist/cjs/components/Renderer';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import config from '../../pinpoint.config';
