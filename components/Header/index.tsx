@@ -86,8 +86,8 @@ const Header = (_props: HeaderProps) => {
 							</span>
 						</Link>
 
-						<Link passHref href="/subscription/subscribe">
-							<a href="/subscription/subscribe" className="relative h-6 group scale-75 md:scale-100">
+						<Link passHref href="/subscribe">
+							<a className="relative h-6 group scale-75 md:scale-100">
 								<span className="relative z-10 px-5 py-2 font-bold leading-tight text-black bg-white border-4 border-gray-900 rounded-lg group-hover:bg-blue-100 cursor-pointer">
 									Signup
 								</span>

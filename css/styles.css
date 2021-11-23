@@ -85,3 +85,7 @@
 	font-size: 1.3rem;
 	line-height: 2.2rem;
 }
+
+.Pinpoint.footerWrapper {
+	@apply bg-white;
+}
