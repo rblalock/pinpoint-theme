@@ -51,8 +51,8 @@ const SubscriptionUnsubscribe = ({ site }: { site: ISite }) => {
 		<PrebuiltSubscriptionUnsubscribe
 			site={site}
 			email={subscription.email}
-			renderHeader={(site) => <Header site={site} noSubscribe />}
-			renderFooter={(site) => <Footer site={site} noSubscribe />}
+			renderHeader={(site) => <Header site={site} />}
+			renderFooter={(site) => <Footer site={site} />}
 			handleSelectHome={() => router.push(getRouterRelativePath(site, '/'))}
 			handleSubscribe={handleSubscribe}
 			handleUnsubscribe={handleUnSubscribe}
